@@ -1,37 +1,16 @@
 [
   {
-    "title": "Another book",
-    "status": "completed",
-    "progress": 100,
-    "rating": 49,
-    "id": 8
-  },
-  {
-    "title": "One more book",
-    "status": "completed",
-    "progress": 100,
-    "rating": 56,
-    "id": 7
-  },
-  {
-    "title": "New Book",
-    "status": "wishlist",
-    "progress": 0,
-    "rating": 0,
-    "id": 6
-  },
-  {
     "title": "Delta V",
-    "status": "completed",
-    "progress": 100,
+    "status": "reading",
+    "progress": 20,
     "rating": 0,
     "id": 5
   },
   {
     "title": "The Wandering Earth",
-    "status": "completed",
-    "progress": 100,
-    "rating": 80,
+    "status": "wishlist",
+    "progress": 0,
+    "rating": 0,
     "id": 4
   },
   {
@@ -40,5 +19,12 @@
     "progress": 100,
     "rating": 80,
     "id": 2
+  },
+  {
+    "title": "The Dark Forest",
+    "status": "completed",
+    "progress": 100,
+    "rating": 90,
+    "id": 1
   }
 ]
