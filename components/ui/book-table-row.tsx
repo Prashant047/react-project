@@ -49,7 +49,7 @@ export default function BookTableRow({
         <TooltipProvider>
           <Tooltip>
             <TooltipTrigger asChild>
-              <Progress value={progress} />
+              <Progress value={status==="completed"?100:status==="wishlist"?0:progress} />
             </TooltipTrigger>
             <TooltipContent>
               <p>{progress}%</p>

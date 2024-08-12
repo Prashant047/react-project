@@ -57,7 +57,14 @@ export default function BookFormDialog({
       </DialogTrigger>
       <Formik
         initialValues={initialValue}
-        onSubmit={(values) => {
+        onSubmit={(values, { resetForm }) => {
+
+          values.progress = Math.min(100, Math.max(0, values.progress));
+          values.rating = Math.min(100, Math.max(0, values.rating));
+
+          values.progress = values.status === "completed"?100: values.status === "wishlist"? 0 : values.progress;
+          values.rating =  values.status === "completed"? values.rating: 0;
+
           if (action == "edit") {
             values = {
               ...values,
@@ -67,6 +74,7 @@ export default function BookFormDialog({
             updateBook(values);
           } else if (action == "new") {
             addBook(values);
+            resetForm();
           }
           setOpen(false);
         }}
@@ -119,7 +127,7 @@ export default function BookFormDialog({
                 }:FieldProps) => (
                 <div>
                   <Label htmlFor="progress">Progress</Label>
-                  <Input id="progress" type="number" {...field}/>
+                  <Input id="progress" type="number" {...field} min={0} max={100}/>
                 </div>
                 )}
               </Field>
@@ -129,7 +137,7 @@ export default function BookFormDialog({
                 }:FieldProps) => (
                 <div>
                   <Label htmlFor="rating">Score</Label>
-                  <Input id="rating" type="number" {...field}/>
+                  <Input id="rating" type="number" {...field} min={0} max={100} />
                 </div>
                 )}
               </Field>
