@@ -1,0 +1,30 @@
+[
+  {
+    "title": "Delta V",
+    "status": "reading",
+    "progress": 30,
+    "rating": 0,
+    "id": 5
+  },
+  {
+    "title": "The Wandering Earth",
+    "status": "wishlist",
+    "progress": 0,
+    "rating": 0,
+    "id": 4
+  },
+  {
+    "title": "3 body problem",
+    "status": "completed",
+    "progress": 100,
+    "rating": 90,
+    "id": 3
+  },
+  {
+    "title": "Origins",
+    "status": "completed",
+    "progress": 100,
+    "rating": 80,
+    "id": 2
+  }
+]
